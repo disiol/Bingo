@@ -16,11 +16,11 @@
 
     <TextView
         android:id="@+id/many_textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/many_1000"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fontFamily="@font/font_rockletter_simple"
         android:gravity="center"
+        android:text="@string/many_1000"
         android:textAllCaps="true"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="413dp" />
+        app:layout_constraintGuide_begin="528dp" />
 
     <ImageView
         android:id="@+id/win_nambers_imageView"
@@ -46,15 +46,95 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bingo_balls_tube" />
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="155dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/bingo_numbers_card"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/bingo_head" />
+
+    <GridLayout
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="6"
+        android:rowCount="6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/win_nambers_imageView">
+        app:layout_constraintTop_toTopOf="@+id/guideline5">
 
-    </FrameLayout>
+        <Button
+            android:id="@+id/baton1"
+            android:text="1" />
 
+        <Button android:text="2"
+            android:id="@+id/bato2" />
+
+        <Button android:text="3" />
+
+        <Button android:text="4" />
+
+        <Button android:text="5" />
+
+        <Button android:text="6" />
+
+        <Button android:text="7" />
+
+        <Button android:text="8" />
+
+        <Button android:text="9" />
+
+        <Button android:text="10" />
+
+        <Button android:text="11" />
+
+        <Button android:text="12" />
+
+        <Button android:text="13" />
+
+        <Button android:text="14" />
+
+        <Button android:text="15" />
+
+        <Button android:text="16" />
+
+        <Button android:text="17" />
+
+        <Button android:text="18" />
+
+        <Button android:text="19" />
+
+        <Button android:text="20" />
+
+        <Button android:text="21" />
+
+        <Button android:text="22" />
+
+        <Button android:text="23" />
+
+        <Button android:text="24" />
+
+        <Button android:text="25" />
+
+        <Button android:text="26" />
+
+        <Button android:text="27" />
+
+        <Button android:text="28" />
+
+        <Button android:text="29" />
+
+        <Button android:text="30" />
+    </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
