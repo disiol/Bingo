@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Bingo</string>
     <string name="many">many:</string>
+    <string name="you_have_passed_the_maximum_number_of_bets">You have passed the maximum number of bets</string>
 </resources>

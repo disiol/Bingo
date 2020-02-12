@@ -1,5 +1,6 @@
 package com.parik.bingo;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -7,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.NumberPicker;
 
 import com.parik.bingo.databinding.ActivityGameBinding;
 
@@ -22,6 +24,11 @@ public class GameActivity extends AppCompatActivity {
     private int childCount;
     private int buttonNaber;
     private int startCapital = 10000;
+    private int capital = 0;
+    private int ratesCaunter;
+    private int maxRates = 5;
+    private int rate = 10;
+    private int bets;
 
 
     @SuppressLint("SetTextI18n")
@@ -30,18 +37,50 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_game);
 
-
-        addBatonsToButtons();
-        addButtonsCardValies();
+        startGame();
 
         binding.exitButton.setOnClickListener(v -> {
             finish();
         });
         binding.newGameButton.setOnClickListener(v -> {
-            celektedNambers.clear();
-            binding.manyTextView2.setText(getText(R.string.many) + String.valueOf(startCapital));
+            startGame();
         });
 
+        binding.startButton.setOnClickListener(v -> {
+            //TODO cheak bets and generate nambers
+        });
+
+        binding.resetCardButton.setOnClickListener(v -> {
+            resetCard();
+        });
+
+    }
+
+    private void resetCard() {
+        capital = capital + bets;
+        ratesCaunter = 0;
+        setTextToMany(capital);
+        resetBatons();
+    }
+
+    private void startGame() {
+        celektedNambers.clear();
+        ratesCaunter = 0;
+        capital = startCapital;
+        resetBatons();
+        setTextToMany(startCapital);
+    }
+
+    private void resetBatons() {
+        buttons.clear();
+        buttonNaber = 0;
+        addBatonsToButtons();
+        addButtonsCardValies();
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void setTextToMany(int capital) {
+        binding.manyTextView2.setText(getText(R.string.many) + String.valueOf(capital));
     }
 
     private void addBatonsToButtons() {
@@ -72,9 +111,14 @@ public class GameActivity extends AppCompatActivity {
             Button button = buttons.get(buttonNaber);
             Log.d(MYLOG_TEG, "buttonId = " + button);
             button.setTag(buttonNaber);
+            button.setTextColor(getResources().getColor(R.color.bleak_color));
             button.setOnClickListener(v -> {
-                celektedNambers.add((Integer) buttons.get(buttonNaber - 1).getTag());
-                button.setTextColor(getResources().getColor(R.color.colorAccent));
+                if (ratesCaunter < maxRates) {
+                    maceRate(button);
+                } else {
+                    showMessage(getString(R.string.you_have_passed_the_maximum_number_of_bets));
+                }
+
 
             });
 
@@ -83,5 +127,28 @@ public class GameActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    private void maceRate(Button button) {
+        capital = capital - rate;
+        bets = bets + rate;
+        ratesCaunter++;
+        setTextToMany(capital);
+
+        celektedNambers.add((Integer) buttons.get(buttonNaber - 1).getTag());
+        button.setTextColor(getResources().getColor(R.color.colorPrimary));
+    }
+
+    public void showMessage(String message) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(message)
+                .setCancelable(false)
+                .setNegativeButton("ОК",
+                        (dialog, id) -> {
+                            dialog.cancel();
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
