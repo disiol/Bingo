@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 import com.parik.bingo.databinding.ActivityGameBinding;
@@ -20,6 +21,7 @@ public class GameActivity extends AppCompatActivity {
     private ActivityGameBinding binding;
     private List<Button> celektedButons = new ArrayList<>();
     private List<Button> buttons = new ArrayList<Button>();
+    private List<Integer> winNabers = new ArrayList<Integer>();
     private String MYLOG_TEG = "My Log";
     private int childCount;
     private int buttonNaber;
@@ -31,6 +33,7 @@ public class GameActivity extends AppCompatActivity {
     private int bets;
     private int win;
     private int lose;
+    private int addIfWin = 20;
     private Random random = new Random();
 
 
@@ -51,34 +54,58 @@ public class GameActivity extends AppCompatActivity {
 
         binding.startButton.setOnClickListener(v -> {
 //TODO
-            buttonNaber= buttons.size();
+            buttonNaber = buttons.size();
             naberseGenerate();
 
             //TODO cheak bets and generate nambers
         });
 
         binding.resetCardButton.setOnClickListener(v -> {
-                        resetCard();
+            resetCard();
         });
 
     }
 
     private void naberseGenerate() {
         binding.ball1TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
-        buttonNaber --;
+        buttonNaber = buttonNaber--;
+        winNabers.add(Integer.valueOf(binding.ball1TextView.getText().toString()));
 
         binding.ball2TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
-        buttonNaber --;
+        buttonNaber = buttonNaber--;
+        winNabers.add(Integer.valueOf(binding.ball2TextView.getText().toString()));
 
         binding.ball3TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
-        buttonNaber --;
+        buttonNaber = buttonNaber--;
+        winNabers.add(Integer.valueOf(binding.ball3TextView.getText().toString()));
 
         binding.ball4TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
-        buttonNaber --;
+        buttonNaber = buttonNaber--;
+        winNabers.add(Integer.valueOf(binding.ball4TextView.getText().toString()));
 
         binding.ball5TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
-        buttonNaber --;
+        buttonNaber = buttonNaber--;
+        winNabers.add(Integer.valueOf(binding.ball5TextView.getText().toString()));
 
+
+        chekForWin();
+
+    }
+
+    private void chekForWin() {
+        for (int i = 0; i < celektedButons.size() ; i++) {
+            celektedButons.get(i).getId();
+
+            int id = binding.card.getChildAt(i).getId();
+            View button = findViewById(id);
+            for (int d = 0; d < winNabers.size() ; d++) {
+                if(button.getTag() == winNabers.get(d)){
+                    win = capital + addIfWin;
+                    setTextToMany(win);
+                }
+
+            }
+        }
     }
 
     private void resetCard() {
