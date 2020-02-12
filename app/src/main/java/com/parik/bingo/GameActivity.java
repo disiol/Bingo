@@ -8,7 +8,6 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.NumberPicker;
 
 import com.parik.bingo.databinding.ActivityGameBinding;
 
@@ -27,7 +26,7 @@ public class GameActivity extends AppCompatActivity {
     private int capital = 0;
     private int ratesCaunter;
     private int maxRates = 5;
-    private int rate = 10;
+    private int bet = 10;
     private int bets;
 
 
@@ -115,10 +114,13 @@ public class GameActivity extends AppCompatActivity {
             button.setTag(buttonNaber);
             button.setTextColor(getResources().getColor(R.color.bleak_color));
             button.setOnClickListener(v -> {
-                if (ratesCaunter < maxRates) {
+                if (ratesCaunter < maxRates && capital >= bet) {
                     maceRate(button);
+                } else if (capital < bet) {
+                    showMessage(getString(R.string.you_dont_have_enough_money_to_bet));
                 } else {
                     showMessage(getString(R.string.you_have_passed_the_maximum_number_of_bets));
+
                 }
 
 
@@ -132,8 +134,8 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void maceRate(Button button) {
-        capital = capital - rate;
-        bets = bets + rate;
+        capital = capital - bet;
+        bets = bets + bet;
         ratesCaunter++;
         setTextToMany(capital);
 

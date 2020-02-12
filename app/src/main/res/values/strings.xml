@@ -6,4 +6,5 @@
     <string name="reset_card">reset card</string>
     <string name="start">start</string>
     <string name="exit">exit</string>
+    <string name="you_dont_have_enough_money_to_bet">You don \'t have enough money to bet</string>
 </resources>
