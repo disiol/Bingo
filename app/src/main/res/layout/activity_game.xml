@@ -345,8 +345,9 @@
 
         <TextView
             android:id="@+id/ball_1_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_1_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_1_imageView"
@@ -355,8 +356,9 @@
 
         <TextView
             android:id="@+id/ball_2_textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_2_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_2_imageView"
@@ -365,8 +367,9 @@
 
         <TextView
             android:id="@+id/ball_3_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_3_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_3_imageView"
@@ -375,19 +378,20 @@
 
         <TextView
             android:id="@+id/ball_4_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_4_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_4_imageView"
-            app:layout_constraintHorizontal_bias="0.619"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toTopOf="@+id/boll_4_imageView" />
 
         <TextView
             android:id="@+id/ball_5_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_5_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_5_imageView"
