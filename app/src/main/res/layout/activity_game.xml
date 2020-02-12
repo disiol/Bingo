@@ -202,28 +202,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="new game" />
+                android:text="@string/new_game" />
 
             <Button
                 android:id="@+id/reset_card_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="reset card" />
+                android:text="@string/reset_card" />
 
             <Button
                 android:id="@+id/start_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="start" />
+                android:text="@string/start" />
 
             <Button
                 android:id="@+id/exit_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="exit" />
+                android:text="@string/exit" />
         </LinearLayout>
 
         <ImageView
@@ -347,7 +347,7 @@
             android:id="@+id/ball_1_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_1_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_1_imageView"
             app:layout_constraintStart_toStartOf="parent"
@@ -357,7 +357,7 @@
             android:id="@+id/ball_2_textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_2_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_2_imageView"
             app:layout_constraintStart_toStartOf="@+id/boll_2_imageView"
@@ -367,7 +367,7 @@
             android:id="@+id/ball_3_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_3_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_3_imageView"
             app:layout_constraintStart_toStartOf="@+id/boll_3_imageView"
@@ -377,7 +377,7 @@
             android:id="@+id/ball_4_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_4_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_4_imageView"
             app:layout_constraintHorizontal_bias="0.619"
@@ -388,7 +388,7 @@
             android:id="@+id/ball_5_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/boll_5_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_5_imageView"
             app:layout_constraintStart_toStartOf="@+id/boll_5_imageView"

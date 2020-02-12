@@ -59,6 +59,7 @@ public class GameActivity extends AppCompatActivity {
     private void resetCard() {
         capital = capital + bets;
         ratesCaunter = 0;
+        bets = 0;
         setTextToMany(capital);
         resetBatons();
     }
@@ -66,6 +67,7 @@ public class GameActivity extends AppCompatActivity {
     private void startGame() {
         celektedNambers.clear();
         ratesCaunter = 0;
+        bets = 0;
         capital = startCapital;
         resetBatons();
         setTextToMany(startCapital);

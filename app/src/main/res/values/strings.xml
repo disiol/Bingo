@@ -2,4 +2,8 @@
     <string name="app_name">Bingo</string>
     <string name="many">many:</string>
     <string name="you_have_passed_the_maximum_number_of_bets">You have passed the maximum number of bets</string>
+    <string name="new_game">new game</string>
+    <string name="reset_card">reset card</string>
+    <string name="start">start</string>
+    <string name="exit">exit</string>
 </resources>
