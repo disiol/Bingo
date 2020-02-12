@@ -3,8 +3,10 @@ package com.parik.bingo;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 
 import com.parik.bingo.databinding.ActivityGameBinding;
 
@@ -15,9 +17,10 @@ public class GameActivity extends AppCompatActivity {
 
     private ActivityGameBinding binding;
     private List<CharSequence> celektedNambers = new ArrayList<CharSequence>();
-    private List<Integer> buttons = new ArrayList<Integer>();
+    private List<Button> buttons = new ArrayList<Button>();
     private String MYLOG_TEG = "My Log";
     private int childCount;
+    private int buttonNaber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +33,23 @@ public class GameActivity extends AppCompatActivity {
 //        });
 
         addBatonsToButtons();
-
+        addButtonsValies();
 
     }
 
     private void addBatonsToButtons() {
-        childCount = binding.card.getChildCount() -1;
-        while (childCount >=0) {
-            buttons.add(binding.card.getChildAt(childCount).getId());
+        Button button;
+        childCount = binding.card.getChildCount() - 1;
+        while (childCount >= 0) {
+
+            int id = binding.card.getChildAt(childCount).getId();
+            button = findViewById(id);
+
+            buttons.add(button);
             childCount--;
         }
 
-        for (int i : buttons) {
+        for (Button i : buttons) {
             Log.d(MYLOG_TEG, " buttonId = " + i);
 
         }
@@ -51,4 +59,22 @@ public class GameActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("ResourceAsColor")
+    public void addButtonsValies() {
+        while (buttonNaber < buttons.size()) {
+            Button button = buttons.get(buttonNaber);
+            Log.d(MYLOG_TEG, "buttonId = " + button);
+
+            button.setOnClickListener(v -> {
+                celektedNambers.add(buttons.get(buttonNaber -1).getText());
+                button.setTextColor(getResources().getColor(R.color.colorAccent));
+
+            });
+
+            buttonNaber++;
+
+        }
+
+
+    }
 }
