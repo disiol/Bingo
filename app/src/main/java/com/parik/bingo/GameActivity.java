@@ -13,11 +13,12 @@ import com.parik.bingo.databinding.ActivityGameBinding;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
     private ActivityGameBinding binding;
-    private List<Integer> celektedNambers = new ArrayList<Integer>();
+    private List<Button> celektedButons = new ArrayList<>();
     private List<Button> buttons = new ArrayList<Button>();
     private String MYLOG_TEG = "My Log";
     private int childCount;
@@ -28,6 +29,9 @@ public class GameActivity extends AppCompatActivity {
     private int maxRates = 5;
     private int bet = 10;
     private int bets;
+    private int win;
+    private int lose;
+    private Random random = new Random();
 
 
     @SuppressLint("SetTextI18n")
@@ -46,12 +50,34 @@ public class GameActivity extends AppCompatActivity {
         });
 
         binding.startButton.setOnClickListener(v -> {
+//TODO
+            buttonNaber= buttons.size();
+            naberseGenerate();
+
             //TODO cheak bets and generate nambers
         });
 
         binding.resetCardButton.setOnClickListener(v -> {
-            resetCard();
+                        resetCard();
         });
+
+    }
+
+    private void naberseGenerate() {
+        binding.ball1TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
+        buttonNaber --;
+
+        binding.ball2TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
+        buttonNaber --;
+
+        binding.ball3TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
+        buttonNaber --;
+
+        binding.ball4TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
+        buttonNaber --;
+
+        binding.ball5TextView.setText(String.valueOf(random.nextInt(buttonNaber)));
+        buttonNaber --;
 
     }
 
@@ -64,7 +90,13 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void startGame() {
-        celektedNambers.clear();
+        binding.ball1TextView.setText("");
+        binding.ball2TextView.setText("");
+        binding.ball3TextView.setText("");
+        binding.ball4TextView.setText("");
+        binding.ball5TextView.setText("");
+
+        celektedButons.clear();
         ratesCaunter = 0;
         bets = 0;
         capital = startCapital;
@@ -139,7 +171,7 @@ public class GameActivity extends AppCompatActivity {
         ratesCaunter++;
         setTextToMany(capital);
 
-        celektedNambers.add((Integer) buttons.get(buttonNaber - 1).getTag());
+        celektedButons.add(button);
         button.setTextColor(getResources().getColor(R.color.colorPrimary));
     }
 

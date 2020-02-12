@@ -355,7 +355,7 @@
             app:layout_constraintTop_toTopOf="@+id/boll_1_imageView" />
 
         <TextView
-            android:id="@+id/ball_2_textView3"
+            android:id="@+id/ball_2_textView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:gravity="center"
