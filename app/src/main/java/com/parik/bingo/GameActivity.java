@@ -23,6 +23,7 @@ public class GameActivity extends AppCompatActivity {
     private int buttonNaber;
     private int startCapital = 10000;
 
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
