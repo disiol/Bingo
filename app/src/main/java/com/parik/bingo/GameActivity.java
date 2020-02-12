@@ -64,7 +64,7 @@ public class GameActivity extends AppCompatActivity {
         while (buttonNaber < buttons.size()) {
             Button button = buttons.get(buttonNaber);
             Log.d(MYLOG_TEG, "buttonId = " + button);
-
+            button.setTag(buttonNaber);
             button.setOnClickListener(v -> {
                 celektedNambers.add(buttons.get(buttonNaber -1).getText());
                 button.setTextColor(getResources().getColor(R.color.colorAccent));
