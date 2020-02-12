@@ -16,24 +16,30 @@ import java.util.List;
 public class GameActivity extends AppCompatActivity {
 
     private ActivityGameBinding binding;
-    private List<CharSequence> celektedNambers = new ArrayList<CharSequence>();
+    private List<Integer> celektedNambers = new ArrayList<Integer>();
     private List<Button> buttons = new ArrayList<Button>();
     private String MYLOG_TEG = "My Log";
     private int childCount;
     private int buttonNaber;
+    private int startCapital = 10000;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_game);
 
-//        binding.baton1.setOnClickListener(v -> {
-//            celektedNambers.add(binding.baton1.getText());
-//            //TODO add baton selector and chehg coor en cre selektor
-//        });
 
         addBatonsToButtons();
-        addButtonsValies();
+        addButtonsCardValies();
+
+        binding.exitButton.setOnClickListener(v -> {
+            finish();
+        });
+        binding.newGameButton.setOnClickListener(v -> {
+            celektedNambers.clear();
+            binding.manyTextView2.setText(getText(R.string.many) + String.valueOf(startCapital));
+        });
 
     }
 
@@ -60,13 +66,13 @@ public class GameActivity extends AppCompatActivity {
 
 
     @SuppressLint("ResourceAsColor")
-    public void addButtonsValies() {
+    public void addButtonsCardValies() {
         while (buttonNaber < buttons.size()) {
             Button button = buttons.get(buttonNaber);
             Log.d(MYLOG_TEG, "buttonId = " + button);
             button.setTag(buttonNaber);
             button.setOnClickListener(v -> {
-                celektedNambers.add(buttons.get(buttonNaber -1).getText());
+                celektedNambers.add((Integer) buttons.get(buttonNaber - 1).getTag());
                 button.setTextColor(getResources().getColor(R.color.colorAccent));
 
             });
