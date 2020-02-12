@@ -100,8 +100,8 @@ public class GameActivity extends AppCompatActivity {
             View button = findViewById(id);
             for (int d = 0; d < winNabers.size() ; d++) {
                 if(button.getTag() == winNabers.get(d)){
-                    win = capital + addIfWin;
-                    setTextToMany(win);
+                    capital = capital + addIfWin;
+                    setTextToMany(capital);
                 }
 
             }
