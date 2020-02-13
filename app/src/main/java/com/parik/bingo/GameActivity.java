@@ -87,28 +87,37 @@ public class GameActivity extends AppCompatActivity {
         buttonNaber = buttonNaber--;
         winNabers.add(Integer.valueOf(binding.ball5TextView.getText().toString()));
 
+        //TODO anim
 
         chekForWin();
 
     }
 
     private void chekForWin() {
-        for (int indexSelectedButton = 0; indexSelectedButton < celektedButons.size() ; indexSelectedButton++) {
+        for (int indexSelectedButton = 0; indexSelectedButton < celektedButons.size(); indexSelectedButton++) {
             celektedButons.get(indexSelectedButton).getId();
 
             int id = binding.card.getChildAt(indexSelectedButton).getId();
             View button = findViewById(id);
-            for (int indexWinNaber = 0; indexWinNaber < winNabers.size() ; indexWinNaber++) {
-                if(button.getTag() == winNabers.get(indexWinNaber)){
-                    capital = capital + addIfWin;
-                    setTextToMany(capital);
-                }
+            int size = winNabers.size();
+            if (size > 0) {
+                for (int indexWinNaber = 0; indexWinNaber < size; indexWinNaber++) {
+                    if (button.getTag() == winNabers.get(indexWinNaber)) {
+                        capital = capital + addIfWin;
+                        setTextToMany(capital);
+                    }
 
+                }
             }
         }
+
+        resetCard();
     }
 
     private void resetCard() {
+        celektedButons.clear();
+        winNabers.clear();
+
         capital = capital + bets;
         ratesCaunter = 0;
         bets = 0;
