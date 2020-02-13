@@ -469,13 +469,9 @@
             android:id="@+id/ball_1_textView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:fontFamily="@font/rockletter_simple"
             android:gravity="center"
             android:text="0"
             android:textAllCaps="true"
-            android:textSize="40dp"
-            android:textStyle="bold"
-
             app:layout_constraintBottom_toBottomOf="@+id/boll_1_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_1_imageView"
             app:layout_constraintStart_toStartOf="parent"
