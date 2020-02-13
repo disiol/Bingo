@@ -69,123 +69,244 @@
 
             <Button
                 android:id="@+id/button1"
-                android:text="1" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:gravity="center"
+                android:text="1"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button2"
-                android:text="2" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="2"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button3"
-                android:text="3" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="3"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button4"
-                android:text="4" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="4"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button5"
-                android:text="5" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="5"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button6"
-                android:text="6" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="6"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button7"
-                android:text="7" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="7"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button8"
-                android:text="8" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="8"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button9"
-                android:text="9" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="9"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button10"
-                android:text="10" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="10"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button11"
-                android:text="11" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="11"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button12"
-                android:text="12" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="12"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button13"
-                android:text="13" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="13"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button14"
-                android:text="14" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="14"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button15"
-                android:text="15" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="15"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button16"
-                android:text="16" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="16"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button17"
-                android:text="17" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="17"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button18"
-                android:text="18" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="18"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button19"
-                android:text="19" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="19"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button20"
-                android:text="20" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="20"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button21"
-                android:text="21" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="21"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button22"
-                android:text="22" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="22"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button23"
-                android:text="23" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="23"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button24"
-                android:text="24" />
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="24"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button25"
-                android:text="25" />
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="25"
+                android:background="@color/aqwa"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button26"
-                android:text="26" />
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="26"
+                android:background="@color/aqwa"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button27"
-                android:text="27" />
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="27"
+                android:background="@color/aqwa"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button28"
-                android:text="28" />
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="28"
+                android:background="@color/aqwa"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button29"
-                android:text="29" />
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="29"
+                android:background="@color/aqwa"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button30"
-                android:text="30" />
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:text="30"
+                android:background="@color/aqwa"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
         </GridLayout>
 
         <LinearLayout
@@ -202,6 +323,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+
                 android:text="@string/new_game" />
 
             <Button
@@ -347,8 +469,13 @@
             android:id="@+id/ball_1_textView"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/rockletter_simple"
             android:gravity="center"
             android:text="0"
+            android:textAllCaps="true"
+            android:textSize="40dp"
+            android:textStyle="bold"
+
             app:layout_constraintBottom_toBottomOf="@+id/boll_1_imageView"
             app:layout_constraintEnd_toEndOf="@+id/boll_1_imageView"
             app:layout_constraintStart_toStartOf="parent"

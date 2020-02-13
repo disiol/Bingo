@@ -93,13 +93,13 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void chekForWin() {
-        for (int i = 0; i < celektedButons.size() ; i++) {
-            celektedButons.get(i).getId();
+        for (int indexSelectedButton = 0; indexSelectedButton < celektedButons.size() ; indexSelectedButton++) {
+            celektedButons.get(indexSelectedButton).getId();
 
-            int id = binding.card.getChildAt(i).getId();
+            int id = binding.card.getChildAt(indexSelectedButton).getId();
             View button = findViewById(id);
-            for (int d = 0; d < winNabers.size() ; d++) {
-                if(button.getTag() == winNabers.get(d)){
+            for (int indexWinNaber = 0; indexWinNaber < winNabers.size() ; indexWinNaber++) {
+                if(button.getTag() == winNabers.get(indexWinNaber)){
                     capital = capital + addIfWin;
                     setTextToMany(capital);
                 }
