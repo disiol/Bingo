@@ -323,7 +323,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:gravity="center"
                 android:text="@string/new_game" />
 
             <Button
@@ -331,6 +333,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:gravity="center"
                 android:text="@string/reset_card" />
 
             <Button
@@ -338,6 +343,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:gravity="center"
                 android:text="@string/start" />
 
             <Button
@@ -345,7 +353,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/exit" />
+                android:text="@string/exit"
+                android:background="@color/aqwa"
+                android:fontFamily="@font/font_rockletter_transparent"
+                android:gravity="center"/>
         </LinearLayout>
 
         <ImageView
